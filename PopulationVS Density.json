@@ -20,7 +20,7 @@
     }
   ],
   "transform": [{"filter": "datum.Population > Population_Above"}],
-  "mark": "circle",
+  "mark": "square",
   "encoding": {
     "x": {
       "field": "Population",
