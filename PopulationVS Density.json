@@ -1,0 +1,56 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 500,
+  "height": 400,
+  "title": "Population in each countries(1979-2016)",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/population_by_country_2020.csv"
+  },
+  "params": [
+    {
+      "name": "Population_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 100000000,
+        "step": 1000000,
+        "name": "Minimum Population: "
+      }
+    }
+  ],
+  "transform": [{"filter": "datum.Population > Population_Above"}],
+  "mark": "circle",
+  "encoding": {
+    "x": {
+      "field": "Population",
+      "type": "quantitative",
+      "title": "Population",
+      "axis": {"tickCount": 7},
+      "scale": {"type": "log", "domain": [1, 1000000000000]}
+    },
+    "y": {
+      "field": "Density (P/Km²)",
+      "type": "quantitative",
+      "axis": {"tickCount": 6},
+      "scale": {"type": "log", "domain": [1, 100000000]}
+    },
+    "color": {"field": "Country", "type": "nominal"},
+    "size": {
+      "field": "Population",
+      "type": "quantitative",
+      "scale": {
+        "type": "threshold",
+        "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+        "range": [10, 50, 150, 200, 300, 400]
+      },
+      "legend": {"format": ".1s"}
+    },
+    "tooltip": [
+      {"field": "Country (or dependency)", "type": "nominal"},
+      {"field": "Population (2020)", "type": "quantitative", "format": ","},
+      {"field": "Land Area (Km²)", "type": "quantitative", "format": ","}
+    ]
+  },
+  "config": {}
+}
