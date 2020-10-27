@@ -6,16 +6,32 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
   <!-- Import vega-embed -->
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 </head>
 <body>
 
+<h1>An Example of Multiple Visualisations</h1>
+  
+<h2>This is the first visualisation</h2>  
 <div id="vis"></div>
 
+<h2>This is the second visualisation</h2>
+<div id="scatter_plot"></div>
+  
 <script type="text/javascript">
+  
   var spec = "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/visualization.vl%20(1).json";
   vegaEmbed('#vis', spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
+  
+  var spec1 = "";
+  vegaEmbed('#scatter_plot', spec1).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
 </script>
 
 </body>
