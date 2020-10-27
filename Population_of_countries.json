@@ -15,15 +15,15 @@
         "data": {
           "url": "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/population_by_country_2020.csv"
         },
-        "key": "Country (or dependency)",
-        "fields": ["Population (2020)"]
+        "key": "Country",
+        "fields": ["Population"]
       }
     }
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "Population (2020)",
+      "field": "Population",
       "type": "quantitative",
       "scale": {"type": "log"}
     }
