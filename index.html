@@ -12,13 +12,16 @@
 </head>
 <body>
 
-<h1>An Example of Multiple Visualisations</h1>
+<h1>DATA VISUALISATION 2</h1>
   
 <h2>This is the first visualisation</h2>  
 <div id="vis"></div>
 
 <h2>This is the second visualisation</h2>
 <div id="scatter_plot"></div>
+  
+<h2>This is the Third visualisation</h2>
+<div id="bubble_plot"></div>
   
 <script type="text/javascript">
   
@@ -29,6 +32,11 @@
   
   var spec1 = "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/PopulationVS%20Density.json";
   vegaEmbed('#scatter_plot', spec1).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  var spec2 = "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/PopulationVS%20Density.json";
+  vegaEmbed('#bubble_plot', spec2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
