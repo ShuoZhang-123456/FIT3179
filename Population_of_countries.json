@@ -1,32 +1,39 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Population of Countries",
-  "width": 400,
-  "height": 200,
-  "projection": {"type": "equirectangular"},
-  "data": {
-    "url": "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/world.geo%20(1).json",
-    "format": {"type": "topojson", "feature": "world"}
-  },
-  "transform": [
-    {
-      "lookup": "properties.name",
-      "from": {
-        "data": {
-          "url": "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/population_by_country_2020.csv"
-        },
-        "key": "Country",
-        "fields": ["Population"]
-      }
-    }
-  ],
-  "mark": {"type": "geoshape"},
-  "encoding": {
-    "color": {
-      "field": "Population",
-      "type": "quantitative",
-      "scale": {"type": "log"}
-    }
-  },
-  "config": {}
+ "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+ "title": "Population of Countries",
+ "width": 800,
+ "height": 600,
+ "projection": {"type": "equirectangular"},
+ "data": {
+ "url": "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/world.geo%20(1).json",
+ "format": {"type": "topojson", "feature": "world"}
+ },
+ "transform": [
+ {
+ "lookup": "properties.name",
+ "from": {
+ "data": {
+ "url": "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/population_by_country_2020.csv"
+ },
+ "key": "Country",
+ "fields": ["Population","Net Change","Density (P/Km²)","Land Area (Km²)","World Share"]
+ }
+ },
+ {"calculate": "datum.Population", "as": "Population"}
+ ],
+ "mark": {"type": "geoshape"},
+ "encoding": {
+ "color": {
+ "field": "Population",
+ "type": "quantitative",
+ "scale": {"type": "log"}
+ },
+ "tooltip": [
+ {"field": "properties.name", "type": "nominal", "title": "Country"},
+ {"field": "Population", "type": "quantitative"},
+ {"field": "Net Change", "type": "quantitative"},
+ {"field": "Density (P/Km²)", "type": "quantitative"},
+ {"field": "Land Area (Km²)", "type": "quantitative"}
+ ]
+ }
 }
