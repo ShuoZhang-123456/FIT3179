@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 250,
+  "width": 350,
   "height": 250,
   "title": "Population Vs Land Area for countries",
   "data": {
