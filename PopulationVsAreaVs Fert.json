@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 400,
-  "height": 300,
+  "width": 250,
+  "height": 250,
   "title": "Population Vs Land Area for countries",
   "data": {
     "url": "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/population_by_country_continent.csv"
