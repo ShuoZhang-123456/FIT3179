@@ -1,4 +1,4 @@
-﻿Country,Population,Yearly Change,Net Change,Density,Land Area,Migrants,Fert. Rate,Med. Age,Urban Pop %,World Share,Region
+﻿Country,Population,YearlyChange,NetChange,Density,LandArea,Migrants,FertRate,MedAge,UrbanPop,WorldShare,Region
 Afghanistan,38742911,2.33%,886592,60,652860,-62920,4.6,18,25%,0.50%,ASIA
 Albania,2878420,-0.11%,-3120,105,27400,-14000,1.6,36,63%,0.04%,EUROPE
 Algeria,43685618,1.85%,797990,18,2381740,-10000,3.1,29,73%,0.56%,AFRICA
