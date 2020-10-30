@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 200,
+  "height": 200,
+  "title": "Highest population for top 10 countries(2020)",
+  "description": "A simple pie chart with labels.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/population_by_top10country_2020.csv"
+  },
+  "encoding": {
+    "theta": {"field": "Population", "type": "quantitative", "stack": true},
+    "color": {"field": "Country", "type": "nominal", "legend": null}
+  },
+  "layer": [
+    {"mark": {"type": "arc", "outerRadius": 80}},
+    {
+      "mark": {"type": "text", "radius": 90},
+      "encoding": {"text": {"field": "Country", "type": "nominal"}}
+    }
+  ],
+  "view": {"stroke": null},
+  "config": {}
+}
