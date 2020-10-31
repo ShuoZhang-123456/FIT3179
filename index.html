@@ -109,6 +109,21 @@ By comparing two chats, countries with a high net population change are because 
     
     </div>
     <!-- end pure grid group -->
+   
+       <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+          <div id="vis4"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+            <h2>Urban Population</h2>
+            <p>The bubble plot is displaying the population versus the land area of different countries. As you can see most of the countries with a high population also have a larger land area. Besides that, most of the countries with a population between one million to 100 million. Some countries and places like Hong Kong, Macau, and Singapore have a higher population but a smaller land area. Besides that, countries in Africa and Asia usually have more people compared to other countries.  Most of the European countries have less fertility rates and African countries usually have a high fertility rate. </p>
+          </div>
+        </div>
+      
+    </div>
+    <!-- end pure grid group -->
   
     <div class="pure-g">
       <div class="pure-u-1-1 small-font">
@@ -123,6 +138,8 @@ By comparing two chats, countries with a high net population change are because 
   var specVis1 = "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/Population_of_countries.json";
   var specVis2 = "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/PopulationVsAreaVs%20Fert.json";
   var specVis3 = "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/NetChangeVsFertRate.json"
+  var specVis4 = "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/UrbanPopulation.json"
+          
   vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
