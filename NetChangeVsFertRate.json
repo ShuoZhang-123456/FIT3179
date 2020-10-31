@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Net Population Change VS Fert Rate",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/population_by_top10country_2020.csv"
+  },
+  "vconcat": [
+    {
+      "width": 480,
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "NetChange",
+          "type": "quantitative",
+          "scale": {"domain": {"selection": "brush"}},
+          "axis": {"title": "Net Population Change", "tickCount": 7}
+        },
+        "y": {
+          "field": "Population",
+          "type": "quantitative",
+          "axis": {"tickCount": 3, "grid": false}
+        },
+        "color": {"field": "Country", "type": "nominal"}
+      }
+    },
+    {
+      "width": 480,
+      "height": 80,
+      "mark": "bar",
+      "selection": {"brush": {"type": "interval", "encodings": ["x"]}},
+      "encoding": {
+        "x": {
+          "field": "NetChange",
+          "type": "quantitative",
+          "axis": {"title": "Net Population Change", "tickCount": 7}
+        },
+        "y": {
+          "field": "FertRate",
+          "type": "quantitative",
+          "axis": {"tickCount": 3, "grid": false},
+          "scale": {"domain": [1, 6]}
+        },
+        "color": {"field": "Country", "type": "nominal"}
+      }
+    }
+  ],
+  "config": {}
+}
