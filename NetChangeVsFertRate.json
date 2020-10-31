@@ -25,7 +25,7 @@
       }
     },
     {
-      "width": 300,
+      "width": 350,
       "height": 80,
       "mark": "bar",
       "selection": {"brush": {"type": "interval", "encodings": ["x"]}},
