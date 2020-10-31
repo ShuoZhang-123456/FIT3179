@@ -6,7 +6,7 @@
   },
   "vconcat": [
     {
-      "width": 300,
+      "width": 350,
       "height": 200,
       "mark": "bar",
       "encoding": {
