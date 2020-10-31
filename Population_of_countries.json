@@ -1,7 +1,7 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
  "title": "Population of Countries",
- "width": 350,
+ "width": 400,
  "height": 200,
  "projection": {"type": "equirectangular"},
  "data": {
