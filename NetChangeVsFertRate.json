@@ -6,7 +6,8 @@
   },
   "vconcat": [
     {
-      "width": 480,
+      "width": 300,
+      "height": 200,
       "mark": "bar",
       "encoding": {
         "x": {
@@ -24,7 +25,7 @@
       }
     },
     {
-      "width": 480,
+      "width": 300,
       "height": 80,
       "mark": "bar",
       "selection": {"brush": {"type": "interval", "encodings": ["x"]}},
