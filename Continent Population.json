@@ -9,15 +9,16 @@
         {"op": "sum", "field": "Population", "as": "PopulationRegion"}
       ],
       "groupby": ["Region"]
-    },
-    {
-      "calculate": "datum.PopulationRegion/datum.Population * 100",
-      "as": "PercentOfTotal"
     }
   ],
-  "mark": "arc",
+    "layer": [{
+    "mark": {"type": "arc", "innerRadius": 20, "stroke": "#fff"}
+  }
+ ],
+
   "encoding": {
     "theta": {"field": "PopulationRegion", "type": "quantitative"},
+        "radius": {"field": "PopulationRegion", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},
     "color": {"field": "Region", "type": "nominal"},
     "text": {"field": "PercentOfTotal", "type": "quantitative"},
     "tooltip": [
