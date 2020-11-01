@@ -1,6 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Net Population Change VS Fert Rate",
+ "title": {
+    "text": "Net Population VS Fert Rate",
+    "anchor": "middle"
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/population_by_top10country_2020.csv"
   },
@@ -11,17 +14,26 @@
       "mark": "bar",
       "encoding": {
         "x": {
-          "field": "NetChange",
-          "type": "quantitative",
+          "field": "Country",
+          "type": "nominal",
           "scale": {"domain": {"selection": "brush"}},
-          "axis": {"title": "Net Population Change", "tickCount": 7}
+          "axis": {"title": "Countries"}
         },
         "y": {
-          "field": "Population",
+          "field": "NetChange",
           "type": "quantitative",
-          "axis": {"tickCount": 3, "grid": false}
+          "title": "Net population",
+          "axis": {"tickCount": 5, "grid": false}
         },
-        "color": {"field": "Country", "type": "nominal"}
+        "color": {"field": "Country", "type": "nominal"},
+          "tooltip": [
+ {"field": "Country", "type": "nominal", "title": "Country"},
+ {"field": "Population", "type": "quantitative", "title": "Population"},
+ {"field": "NetChange", "type": "quantitative", "title": "Net Change"},
+ {"field": "Density", "type": "quantitative", "title": "Density"},
+ {"field": "LandArea", "type": "quantitative", "title": "Land Area"},
+ {"field": "Region", "type": "nominal", "title": "Continent"}
+ ]
       }
     },
     {
@@ -31,19 +43,29 @@
       "selection": {"brush": {"type": "interval", "encodings": ["x"]}},
       "encoding": {
         "x": {
-          "field": "NetChange",
-          "type": "quantitative",
-          "axis": {"title": "Net Population Change", "tickCount": 7}
+          "field": "Country",
+          "type": "nominal",
+          "axis": {"title": "Countries"}
         },
         "y": {
           "field": "FertRate",
+          "title": "Fertility Rate",
           "type": "quantitative",
           "axis": {"tickCount": 3, "grid": false},
           "scale": {"domain": [1, 6]}
         },
-        "color": {"field": "Country", "type": "nominal"}
+        "color": {"field": "Country", "type": "nominal"},
+          "tooltip": [
+ {"field": "Country", "type": "nominal", "title": "Country"},
+ {"field": "Population", "type": "quantitative", "title": "Population"},
+ {"field": "NetChange", "type": "quantitative", "title": "Net Change"},
+ {"field": "Density", "type": "quantitative", "title": "Density"},
+ {"field": "LandArea", "type": "quantitative", "title": "Land Area"},
+ {"field": "Region", "type": "nominal", "title": "Continent"}
+ ]
       }
     }
   ],
   "config": {}
+
 }
