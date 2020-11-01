@@ -66,14 +66,14 @@
   },
   "mark": "circle",
   "encoding": {
-    "x": {
+    "y": {
       "field": "Population",
       "type": "quantitative",
       "title": "Population",
       "axis": {"tickCount": 7},
       "scale": {"type": "log", "domain": [1, 10000000000]}
     },
-    "y": {
+    "x": {
       "field": "LandArea",
       "type": "quantitative",
       "title": "Land Area",
