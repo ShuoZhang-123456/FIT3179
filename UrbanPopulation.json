@@ -33,11 +33,12 @@
   "encoding": {
     "color": {
       "field": "UrbanPop",
+      "title": "Pop%",
       "type": "quantitative",
       "scale": {
         "type": "threshold",
-        "domain": [0.25, 0.5, 0.75, 1],
-        "range": ["#fefcb7", "#fdfa85", "#fd8d3c", "#e6550d", "#a63603"]
+        "domain": [0.25, 0.5, 0.75],
+        "range": ["#fefcb7", "#fdfa85", "#fd8d3c", "#e6550d"]
       }
     },
     "tooltip": [
