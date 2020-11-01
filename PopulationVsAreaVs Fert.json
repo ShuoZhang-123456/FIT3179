@@ -85,7 +85,7 @@
       "type": "nominal",
       "scale": {
         "domain": [
-          "NORTHERN_AMERICA",
+          "N_AMERICA",
           "LATIN",
           "EUROPE",
           "AFRICA",
