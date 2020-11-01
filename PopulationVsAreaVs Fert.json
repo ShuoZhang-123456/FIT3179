@@ -76,6 +76,7 @@
     "y": {
       "field": "LandArea",
       "type": "quantitative",
+      "title": "Land Area",
       "axis": {"tickCount": 6},
       "scale": {"type": "log", "domain": [1, 100000000]}
     },
