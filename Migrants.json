@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": {"text": "Migrants of top10 countries(2020)", "anchor": "middle"},
+  "width": 250,
+  "height": 200,
+  "data": {
+    "url": "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/population_by_top10country_2020.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "Country",
+      "type": "nominal",
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelAngle": 0,
+        "labelPadding": 4
+      }
+    },
+    "x": {
+      "field": "Migrants",
+      "type": "quantitative",
+      "axis": {
+        "gridColor": {
+          "condition": {"test": "datum.value === 0", "value": "black"},
+          "value": "#ddd"
+        }
+      }
+    },
+    "color": {
+      "condition": {"test": "datum.Migrants < 0", "value": "#4F81B2"},
+      "value": "#F29135"
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Population", "type": "quantitative", "format": ","},
+      {"field": "NetChange", "type": "quantitative", "format": ","},
+      {"field": "LandArea", "type": "quantitative", "format": ","},
+      {"field": "FertRate", "type": "quantitative", "format": ","},
+      {"field": "MedAge", "type": "quantitative", "format": ","},
+      {"field": "Region", "type": "nominal"}
+    ]
+  },
+  "config": {}
+}
