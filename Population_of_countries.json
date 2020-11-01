@@ -26,7 +26,8 @@
  "color": {
  "field": "Population",
  "type": "quantitative",
- "scale": {"type": "log"}
+ "scale": {"type": "log"},
+ "legend": {"format": ".1s"}
  },
  "tooltip": [
  {"field": "properties.name", "type": "nominal", "title": "Country"},
