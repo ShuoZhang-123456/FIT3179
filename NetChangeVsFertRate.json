@@ -10,7 +10,7 @@
   "vconcat": [
     {
       "width": 350,
-      "height": 200,
+      "height": 150,
       "mark": "bar",
       "encoding": {
         "x": {
