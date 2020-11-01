@@ -58,7 +58,7 @@
    <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h1>Population of the Countries</h1>
+        <h1>Population of the Countries(2020)</h1>
         <p>There are 195 countries in the world and these countries have different land areas, populations, located on a different continent. I want to find out the unique part of these countries by the display and comparing their attributes.</p>
       </div>
     </div>
@@ -68,7 +68,7 @@
     <div class="pure-g">
         <div class="pure-u-1-3">
           <div class="description description-left">
-            <h2>Population of countries</h2>
+            <h2>Population of countries(2020)</h2>
             <p>The first map of this assignment is the population of the countries in the world. The darkness of the color decided the population of countries in the world. As you can see from the graph, China, India, the United States have the highest population, and countries in the Middle East and North Africa have fewer people.</p>
           </div>
         </div>
@@ -85,7 +85,7 @@
         </div>
         <div class="pure-u-1-3">
           <div class="description description-right">
-            <h2>Population VS Land Area</h2>
+            <h2>Population VS Land Area(2020)</h2>
             <p>The bubble plot is displaying the population versus the land area of different countries. As you can see most of the countries with a high population also have a larger land area. Besides that, most of the countries with a population between one million to 100 million. Some countries and places like Hong Kong, Macau, and Singapore have a higher population but a smaller land area. Besides that, countries in Africa and Asia usually have more people compared to other countries.  Most of the European countries have less fertility rates and African countries usually have a high fertility rate. </p>
           </div>
         </div>
@@ -97,7 +97,7 @@
     <div class="pure-g">
       <div class="pure-u-1-3">
         <div class="description description-left">
-          <h2>Population& Fertility Rate</h2>
+          <h2>Population& Fertility Rate(2020)</h2>
           <p>In the bar chart above, the population of China is higher than any other countries but China is not the country with the most number of population increase. India has less population but a higher population increase in the year 2020.  
 Looking at the bottom chart, China and India have a higher population increase in 2020 but the fertility rate is lower than Nigeria and Pakistan. 
 By comparing two chats, countries with a high net population change are because of a higher population but not fertility rate.</p>
@@ -117,7 +117,7 @@ By comparing two chats, countries with a high net population change are because 
         </div>
         <div class="pure-u-1-3">
           <div class="description description-right">
-            <h2>Urban Population</h2>
+            <h2>Urban Population(2020)</h2>
             <p>From the map, I could see that there are most of the European countries, North American, South American, and some other countries generally have a higher percentage of Urban Population. These countries most likely are developed countries. For example, the US's GDP is 21427.70 billion dollars in 2019 and Australia's GDP is 1392.70 billion dollars in 2019. These show that a higher urban population may be related to better economic performance.</p>
           </div>
         </div>
@@ -129,7 +129,7 @@ By comparing two chats, countries with a high net population change are because 
     <div class="pure-g">
       <div class="pure-u-1-3">
         <div class="description description-left">
-          <h2>Continent population</h2>
+          <h2>Continent population(2020)</h2>
           <p>This chart displays the continent of all the countries. As we can see, Asia has the most number of population and is followed by Africa and Europe. The population proportion of Asia is 56.75%, Africa is 15.76%, and Europe is 10.01% of the overall population.</p>
         </div>
       </div>
@@ -137,6 +137,21 @@ By comparing two chats, countries with a high net population change are because 
         <div id="vis5"  class="vis-container"></div>
       </div>
     
+    </div>
+    <!-- end pure grid group -->
+   
+          <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+          <div id="vis6"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+            <h2>Migrants of top10 countries(2020)</h2>
+            <p>Based on the number in 2020, the population top 10 countries only have three countries with increase migrants, and the rest of the seven countries are losing migrants. The USA has the highest migrants in the year 2020 and this may be related to the USA has an open population policy that welcomes people from all over the world.</p>
+          </div>
+        </div>
+      
     </div>
     <!-- end pure grid group -->
    
@@ -155,6 +170,9 @@ By comparing two chats, countries with a high net population change are because 
   var specVis3 = "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/NetChangeVsFertRate.json"
   var specVis4 = "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/UrbanPopulation.json"
   var specVis5 = "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/Continent%20Population.json"   
+  var specVis6 = "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/Migrants.json"   
+          
+          
   vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
@@ -172,6 +190,10 @@ By comparing two chats, countries with a high net population change are because 
   }).catch(console.error);
           
    vegaEmbed('#vis5', specVis5, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+          
+   vegaEmbed('#vis6', specVis6, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
