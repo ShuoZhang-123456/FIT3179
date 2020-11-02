@@ -10,7 +10,7 @@
   "vconcat": [
     {
       "width": 350,
-      "height": 150,
+      "height": 130,
       "mark": "bar",
       "encoding": {
         "x": {
@@ -38,7 +38,7 @@
     },
     {
       "width": 350,
-      "height": 80,
+      "height": 60,
       "mark": "bar",
       "selection": {"brush": {"type": "interval", "encodings": ["x"]}},
       "encoding": {
