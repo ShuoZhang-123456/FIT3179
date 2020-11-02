@@ -155,6 +155,21 @@ By comparing two chats, countries with a high net population change are because 
     </div>
     <!-- end pure grid group -->
    
+        <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>Med Age Vs Fert Rate(2020)</h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="pure-u-2-3">
+        <div id="vis7"  class="vis-container"></div>
+      </div>
+    
+    </div>
+    <!-- end pure grid group -->
+   
     <div class="pure-g">
       <div class="pure-u-1-1 small-font">
         <p>This visualisation is created by <a href="https://github.com/KadekSatriadi" target="_blank">Kadek Satriadi</a>. The datasource is <a href="#"" target="_blank">some data repository online</href>.</p>
@@ -171,6 +186,8 @@ By comparing two chats, countries with a high net population change are because 
   var specVis4 = "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/UrbanPopulation.json"
   var specVis5 = "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/Continent%20Population.json"   
   var specVis6 = "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/Migrants.json"   
+  var specVis7 = "https://raw.githubusercontent.com/ShuoZhang-123456/FIT3179/main/MedAgeVsFertR.json"   
+          
           
           
   vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
@@ -196,6 +213,11 @@ By comparing two chats, countries with a high net population change are because 
    vegaEmbed('#vis6', specVis6, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
+   
+   vegaEmbed('#vis7', specVis7, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+          
 </script>
 </body>
 </html>
